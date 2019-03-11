@@ -1,5 +1,34 @@
 set nocompatible		"requrie
 filetype off "required
+"Remove the arrow keys
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+
+"Remove the arrow keys
+vnoremap <up> <nop>
+vnoremap <down> <nop>
+vnoremap <left> <nop>
+vnoremap <right> <nop>
+
+"Remove the arrow keys
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+"remap keys
+map! ö [
+map! ä ]
+map! Ö {
+map! Ä }
+"map ≤ |
+map! å <C-]>
+map! Å /
+
+"set the leader
+let mapleader = ","
 
 syntax enable
 " Set the runtime path to include Vudle an initialize
@@ -12,7 +41,8 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'junegunn/fzf'
-
+Plugin 'davidhalter/jedi-vim'
+Plugin 'ervandew/supertab'
 "End vundle
 call vundle#end()
 
@@ -28,7 +58,7 @@ set t_Co=256
 
 "fix tabs
 set tabstop=4
-set noexpandtab
+set expandtab
 set shiftwidth=4
 
 vnoremap . :normal.<CR>
